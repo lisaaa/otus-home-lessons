@@ -25,9 +25,9 @@ public class JavaBasicHomeLessons1 {
 
         if (data <= 10){
             System.out.println("Красный. data  = " + data);
-        } else if (data > 10 || data <=20) {
+        } else if (data <= 20) {
             System.out.println("Желтый. data  = " + data);
-        } else if (data > 20) {
+        } else  {
             System.out.println("Зеленый. data  = " + data);
         }
     }
