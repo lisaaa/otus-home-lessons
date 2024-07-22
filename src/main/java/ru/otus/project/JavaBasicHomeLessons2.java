@@ -30,7 +30,7 @@ public class JavaBasicHomeLessons2 {
 
         for (int i = 0; i < arrayNumbers.length; i++) {
 
-            if (arrayNumbers[i] == 5) {
+            if (arrayNumbers[i] > 5) {
                 sum += arrayNumbers[i];
             }
         }
@@ -82,13 +82,15 @@ public class JavaBasicHomeLessons2 {
 
             System.out.println("Сумма левой половины массива больше");
 
-        } else if (sumLeftPart < sumRightPart) {
-
-            System.out.println("Сумма правой половины массива больше");
-
         } else if (sumLeftPart == sumRightPart) {
 
             System.out.println("Суммы половин массива равны");
+        }
+
+        else  {
+
+            System.out.println("Сумма правой половины массива больше");
+
         }
     }
 
