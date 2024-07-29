@@ -43,12 +43,10 @@ public class JavaBasicHomeLessons3 {
     public static void printSquare(int size) {
 
 
-        char[][] array = new char[size][size];
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
 
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                array[i][j] = '*';
-                System.out.print(array[i][j] + " ");
+                System.out.print("*" + " ");
             }
             System.out.println();
         }
@@ -98,21 +96,16 @@ public class JavaBasicHomeLessons3 {
 
         int sum = 0;
 
-        if (array.length == 1) {
+        if (array.length < 2) {
             return -1;
         }
 
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
+        for (int j = 0; j < array[1].length; j++) {
 
-                if (i == 1) {
+            sum += array[1][j];
 
-                    sum += array[i][j];
-
-                }
-
-            }
         }
+
         return sum;
     }
 
