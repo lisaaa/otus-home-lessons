@@ -1,4 +1,4 @@
-package ru.otus.project;
+package ru.otus.project.module1;
 
 import java.util.Arrays;
 
