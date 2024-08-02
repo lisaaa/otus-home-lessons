@@ -30,8 +30,7 @@ public class Box {
         isOpen = false;
 
         System.out.println("Коробка закрыта");
-    };
-
+    }
 
     public void info() {
 
@@ -39,8 +38,9 @@ public class Box {
                 + "Высота: " + hight + "\n"
                 + "Ширина: " + width + "\n"
                 + "Цвет: " + color + "\n"
-                + "В коробке предмет: " + item + "\n");
-    };
+                + "В коробке предмет: " + item + "\n"
+                + "Коробка открыта: " + isOpen);
+    }
 
     public void addItem(String newItem) {
 
@@ -57,37 +57,39 @@ public class Box {
         }
 
 
-    };
+    }
 
     public void removeItem() {
 
-        System.out.println("Из коробки удален предмет " + item);
-        item = null;
+        if (isOpen == false) {
 
-    };
+            open();
+        }
+
+        if (item == null) {
+            System.out.println("Коробка пуста!");
+        } else {
+
+            System.out.println("Из коробки удален предмет " + item);
+            item = null;
+        }
+
+
+    }
+
 
     public int getLenght() {
         return lenght;
     }
 
-    public void setLenght(int lenght) {
-        System.out.println("Изменить длину коробки нельзя!");
-    }
 
     public int getHight() {
         return hight;
     }
 
-    public void setHight(int hight) {
-        System.out.println("Изменить высоту коробки нельзя!");
-    }
 
     public int getWidth() {
         return width;
-    }
-
-    public void setWidth(int width) {
-        System.out.println("Изменить ширину коробки нельзя!");
     }
 
     public String getColor() {
@@ -103,16 +105,9 @@ public class Box {
         return item;
     }
 
-    public void setItem(String item) {
-        this.item = item;
-    }
 
     public Boolean getOpen() {
         return isOpen;
-    }
-
-    public void setOpen(Boolean open) {
-        isOpen = open;
     }
 
 

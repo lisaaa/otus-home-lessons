@@ -20,7 +20,7 @@ public class Application {
 
         for (int i = 0; i < users.length; i++) {
 
-            if (users[i].getAge(users[i].getBirthDate()) > 40){
+            if (users[i].getAge() > 40){
 
                 users[i].info();
 
@@ -29,20 +29,15 @@ public class Application {
         }
 
         Box box = new Box(12,3,45,"зеленый", "карандаш", false);
-     
+
         box.removeItem();
         box.addItem("hexrf");
         box.setColor("красный");
-        box.setHight(3);
         box.getHight();
         box.info();
+        box.removeItem();
+        box.removeItem();
 
     }
-
-
-
-
-
-
 
 }

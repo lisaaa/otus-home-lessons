@@ -28,7 +28,7 @@ public class User {
         );
     }
 
-    public int getAge(String birthDate){
+    public int getAge(){
 
         Period period = LocalDate.parse(birthDate).until(LocalDate.now());
         return period.getYears();
