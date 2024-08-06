@@ -1,12 +1,14 @@
-package ru.otus.project.module2.homeLessons5;
+package ru.otus.project.module2.homeworks.lessons5;
 
-public class Animal {
+abstract public class Animal {
 
     String name;
     int speedRun;
     int speedSwim;
     int hardiness;
+
     boolean isTired;
+
 
     public String getName() {
         return name;
@@ -46,6 +48,8 @@ public class Animal {
 
     public int run(int distance) {
 
+        hardiness = -distance;
+
         if (hardiness <= 0) {
             isTired = true;
             System.out.println(name + " устал!");
@@ -55,8 +59,18 @@ public class Animal {
         System.out.println(name + " бежит");
         int time = distance / speedRun;
 
-        hardiness = hardiness - 1 * distance;
         return time;
+    }
+
+    public int swim(int distance) {
+
+        if (hardiness <= 0) {
+            isTired = true;
+            System.out.println(name + " устал!");
+            return -1;
+        }
+
+        return distance / speedSwim;
     }
 
 

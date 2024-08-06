@@ -1,11 +1,9 @@
 package ru.otus.project.module2;
 
 
-import ru.otus.project.module2.homeLessons4.Box;
-import ru.otus.project.module2.homeLessons4.User;
-import ru.otus.project.module2.homeLessons5.Cat;
-import ru.otus.project.module2.homeLessons5.Dog;
-import ru.otus.project.module2.homeLessons5.Horse;
+import ru.otus.project.module2.homeworks.lessons5.Cat;
+import ru.otus.project.module2.homeworks.lessons5.Dog;
+import ru.otus.project.module2.homeworks.lessons5.Horse;
 
 public class Application {
 
