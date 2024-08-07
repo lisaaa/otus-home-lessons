@@ -1,12 +1,12 @@
 package ru.otus.project.module2.homeworks.lessons5;
 
-abstract public class Animal {
+ public abstract class Animal {
 
     String name;
     int speedRun;
     int speedSwim;
     int hardiness;
-
+    int swimHardinessConsumption;
     boolean isTired;
 
 
@@ -38,21 +38,21 @@ abstract public class Animal {
         return hardiness;
     }
 
+     public Animal(String name, int speedRun, int speedSwim, int hardiness) {
+         this.name = name;
+         this.speedRun = speedRun;
+         this.speedSwim = speedSwim;
+         this.hardiness = hardiness;
+     }
 
-    public Animal(String name, int speedRun, int speedSwim, int hardiness) {
-        this.name = name;
-        this.speedRun = speedRun;
-        this.speedSwim = speedSwim;
-        this.hardiness = hardiness;
-    }
+     public int run(int distance) {
 
-    public int run(int distance) {
-
-        hardiness = -distance;
+        hardiness -= swimHardinessConsumption*distance;
 
         if (hardiness <= 0) {
             isTired = true;
             System.out.println(name + " устал!");
+            hardiness = 0;
             return -1;
         }
 
@@ -64,9 +64,19 @@ abstract public class Animal {
 
     public int swim(int distance) {
 
+        if (swimHardinessConsumption == -1){
+
+            System.out.println(name + "  не умеет плавать!");
+
+        } else
+        {
+            hardiness -= swimHardinessConsumption*distance;
+        }
+
         if (hardiness <= 0) {
             isTired = true;
             System.out.println(name + " устал!");
+            hardiness = 0;
             return -1;
         }
 
