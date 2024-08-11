@@ -8,10 +8,5 @@ public class Horse extends Animal {
         this.swimHardinessConsumption = 2;
     }
 
-    @Override
-    public int swim(int distance ) {
 
-        return super.swim(distance);
-
-    }
 }

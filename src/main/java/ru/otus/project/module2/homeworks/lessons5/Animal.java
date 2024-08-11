@@ -47,7 +47,7 @@ package ru.otus.project.module2.homeworks.lessons5;
 
      public int run(int distance) {
 
-        hardiness -= swimHardinessConsumption*distance;
+        hardiness -= 1*distance;
 
         if (hardiness <= 0) {
             isTired = true;
@@ -79,7 +79,8 @@ package ru.otus.project.module2.homeworks.lessons5;
             hardiness = 0;
             return -1;
         }
-
+        
+        System.out.println(name + " плывет");
         return distance / speedSwim;
     }
 

@@ -7,10 +7,5 @@ public class Cat extends Animal {
         this.swimHardinessConsumption = -1;
     }
 
-    @Override
-    public int swim(int distance) {
 
-        return super.swim(distance);
-
-    }
 }
