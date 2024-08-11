@@ -79,7 +79,7 @@ package ru.otus.project.module2.homeworks.lessons5;
             hardiness = 0;
             return -1;
         }
-        
+
         System.out.println(name + " плывет");
         return distance / speedSwim;
     }
