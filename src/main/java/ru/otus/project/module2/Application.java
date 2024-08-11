@@ -1,27 +1,25 @@
 package ru.otus.project.module2;
 
 
-import ru.otus.project.module2.homeworks.lessons5.Cat;
-import ru.otus.project.module2.homeworks.lessons5.Dog;
-import ru.otus.project.module2.homeworks.lessons5.Horse;
+import ru.otus.project.module2.homeworks.lessons13.Car;
+import ru.otus.project.module2.homeworks.lessons13.Human;
+
+
+import static ru.otus.project.module2.homeworks.lessons13.Terrain.PLAIN;
+import static ru.otus.project.module2.homeworks.lessons13.Terrain.SWAMP;
 
 public class Application {
 
     public static void main(String[] args) {
 
-        Cat cat = new Cat("kitty", 10, 2, 5);
-        Dog dog = new Dog("doggy", 10, 5, 150);
-        Horse horse = new Horse("pony", 120, 20, 40);
 
-        System.out.println("выносливость: " + dog.getHardiness());
-        System.out.println(dog.swim(20));
-        System.out.println("выносливость: " + dog.getHardiness());
-        System.out.println(dog.run(30));
-        System.out.println("выносливость: " + dog.getHardiness());
-        dog.info();
 
-        cat.info();
-        System.out.println(cat.swim(1));
+        Human human = new Human("bdfy","машина");
+        Car car = new Car(10,100,SWAMP);
+        Car car2 = new Car(10,100,PLAIN);
+        human.walk();
+        car.drive(human);
+        car2.drive(human);
 
 
     }
