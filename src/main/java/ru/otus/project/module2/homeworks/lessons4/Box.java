@@ -1,4 +1,4 @@
-package ru.otus.project.module2;
+package ru.otus.project.module2.homeworks.lessons4;
 
 public class Box {
 
