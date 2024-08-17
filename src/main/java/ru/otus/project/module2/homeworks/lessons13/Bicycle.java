@@ -24,7 +24,7 @@ public class Bicycle implements Transport {
     }
 
     @Override
-    public boolean drive(Human human) {
+    public boolean move(Human human, Terrain terrain) {
 
         if (terrain.equals(SWAMP)) {
             return false;

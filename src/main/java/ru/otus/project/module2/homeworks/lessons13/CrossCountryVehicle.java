@@ -18,7 +18,7 @@ public class CrossCountryVehicle extends Vehicle implements Transport{
     }
 
     @Override
-    public boolean drive(Human human) {
+    public boolean move(Human human, Terrain terrain) {
 
         if (hasPetrol()== false){
             System.out.println("Бензин закончился");

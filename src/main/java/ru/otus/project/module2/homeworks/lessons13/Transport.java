@@ -4,7 +4,7 @@ public interface Transport {
 
     void getOn(Human human);
     void getOff(Human human);
-    boolean drive(Human human);
+    boolean move(Human human, Terrain terrain);
 
 }
 

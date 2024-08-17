@@ -25,14 +25,14 @@ public class Horse implements Transport{
     }
 
     @Override
-    public boolean drive (Human human) {
+    public boolean move(Human human, Terrain terrain) {
 
         if (terrain.equals(SWAMP)) {
             System.out.println("Лошадь не может уехать по болоту");
             return false;
         }
 
-        if (power == 0 ){
+        if (power <= 0 ){
             System.out.println("Силы у лошади закончились");
             power = 0;
             return false;

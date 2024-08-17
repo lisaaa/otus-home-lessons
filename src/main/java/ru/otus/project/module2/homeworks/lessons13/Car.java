@@ -7,9 +7,9 @@ public class Car extends Vehicle implements Transport {
 
     Terrain terrain;
 
-    public Car(int petrol, int distance,Terrain terrain) {
+    public Car(int petrol, int distance) {
         super(petrol, distance);
-        this.terrain = terrain;
+
 
     }
 
@@ -24,7 +24,7 @@ public class Car extends Vehicle implements Transport {
     }
 
     @Override
-    public boolean drive(Human human) {
+    public boolean move(Human human, Terrain terrain) {
 
         if (terrain.equals(SWAMP)||terrain.equals(FOREST)) {
             System.out.println("Машина не может ехать по этой местности");

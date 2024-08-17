@@ -14,12 +14,12 @@ public class Application {
 
 
 
-        Human human = new Human("bdfy","машина");
-        Car car = new Car(10,100,SWAMP);
-        Car car2 = new Car(10,100,PLAIN);
+        Human human = new Human("bdfy","машина",56,23);
+        Car car = new Car(10,100);
+        Car car2 = new Car(10,100);
         human.walk();
-        car.drive(human);
-        car2.drive(human);
+        car.move(human, SWAMP);
+        car2.move(human, PLAIN);
 
 
     }
