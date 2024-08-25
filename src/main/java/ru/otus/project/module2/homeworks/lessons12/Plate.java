@@ -28,11 +28,12 @@ public class Plate {
 
     public boolean decreaseFood(int food) {
 
-        currentFoodLevel -= food;
-
         if (currentFoodLevel <= 0) {
             currentFoodLevel = 0;
+            System.out.println("В тарелке закончилась еда!");
         }
+
+        currentFoodLevel -= food;
 
         return true;
     }
