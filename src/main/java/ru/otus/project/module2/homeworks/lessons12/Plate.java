@@ -2,8 +2,8 @@ package ru.otus.project.module2.homeworks.lessons12;
 
 public class Plate {
 
-    int maxFoodLevel;
-    int currentFoodLevel;
+    private int maxFoodLevel;
+    private int currentFoodLevel;
 
 
     public Plate(int maxFoodLevel) {
@@ -31,7 +31,7 @@ public class Plate {
         currentFoodLevel -= food;
 
         if (currentFoodLevel <= 0) {
-            return false;
+            currentFoodLevel = 0;
         }
 
         return true;

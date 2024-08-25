@@ -2,9 +2,9 @@ package ru.otus.project.module2.homeworks.lessons12;
 
 public class Cat {
 
-    String name;
-    int appetite;
-    boolean isHungry;
+    private String name;
+    private int appetite;
+    private boolean isHungry;
 
     public Cat(String name, int appetite) {
         this.name = name;
