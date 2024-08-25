@@ -10,11 +10,12 @@ public class JavaLessons15 {
 
         //System.out.println(makeArray(1, 10));
 
-     //   ArrayList<Integer> arr1 =  new ArrayList<>(Arrays.asList(1,2,3,4,6,5,5));
+        ArrayList<Integer> arr1 =  new ArrayList<>();
+        //arr1.clear();
     //    System.out.println(sumArray(arr1));
 
-     //   ArrayList<Integer> arr2 = changeArray(3,arr1);
-       // System.out.println(arr2);
+        ArrayList<Integer> arr2 = changeArray(3,arr1);
+        System.out.println(arr2);
 
        // ArrayList<Integer> arr3 = increaseArray(3,arr1);
         //System.out.println(arr3);
@@ -27,7 +28,7 @@ public class JavaLessons15 {
 
         //System.out.println(listEmployeeName(employees));
         //ArrayList<Employee> employees1 =  listEmployeeOlderThanAge(employees,30);
-        System.out.println(youngEmployee(employees).toString());
+       // System.out.println(youngEmployee(employees).toString());
 
     }
 
@@ -135,7 +136,10 @@ public class JavaLessons15 {
 
         for (int i = 0; i < array.size(); i++) {
 
-            array.set(i,number);
+            if (!array.get(i).equals(null)) {
+
+                array.set(i, number);
+            }
 
         }
 
