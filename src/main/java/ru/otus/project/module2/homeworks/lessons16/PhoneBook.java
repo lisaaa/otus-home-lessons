@@ -2,33 +2,31 @@ package ru.otus.project.module2.homeworks.lessons16;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class PhoneBook {
 
-    HashMap<String, Object> list = new HashMap<>();
-
-    public PhoneBook() {
-
-    }
-
+    private HashMap<String, Person> list = new HashMap<>();
+    
     public void add(String number, Person person) {
 
         list.put(number, person);
 
     }
 
-    public ArrayList<String> find(String lastname) {
+    public List<String> find(String lastname) {
 
         ArrayList<String> numbers = new ArrayList<>();
 
-        for (Map.Entry<String, Object> entry : list.entrySet()) {
 
+        for (Map.Entry<String, Person> entry : list.entrySet()) {
 
-            if (entry.getValue().toString().contains(lastname)) {
+            Person person = entry.getValue();
+
+            if (person.getLastname().equals(lastname)) {
 
                 numbers.add(entry.getKey());
-
             }
 
         }
