@@ -3,8 +3,8 @@ package ru.otus.project.module2.homeworks.lessons14;
 public class AppArrayDataException extends RuntimeException{
 
 
-    private int i;
-    private int j;
+    private final int i;
+    private final int j;
 
     public AppArrayDataException(String message, int i, int j) {
         super(message);
