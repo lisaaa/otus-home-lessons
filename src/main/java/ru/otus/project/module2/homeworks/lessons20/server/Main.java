@@ -17,8 +17,10 @@ public class Main {
     private static void readRequest(Socket socket) throws IOException {
         DataInputStream input = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
         DataOutputStream output = new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
+        output.writeUTF( "+ - * /");
+        output.flush();
         String str = input.readUTF();
-        System.out.println("User input:" +str);
+        System.out.println("User input:" + str);
         String calcResult;
         calcResult = String.valueOf(calc(str));
         System.out.println("Result: " + calcResult);

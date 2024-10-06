@@ -8,12 +8,14 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите через пробел числа и операцию");
-        String userInput = scanner.nextLine();
+
 
         try(Socket socket = new Socket("localhost", 8888);
             PingClient client = new PingClient(socket)
         ) {
+            System.out.println("Доступные операции: " + client.read());
+            System.out.println("Введите через пробел числа и операцию");
+            String userInput = scanner.nextLine();
             client.send(userInput);
             System.out.println("Result = " + client.read());
         } catch (UnknownHostException e) {
