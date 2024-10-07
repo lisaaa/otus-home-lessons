@@ -18,7 +18,7 @@ public class Treads {
         }
     }
 
-    public static synchronized void createArrWithTreads(int count) throws InterruptedException {
+    public static void createArrWithTreads(int count) throws InterruptedException {
 
         double[] array = new double[count];
         Thread t1 = new Thread(() -> {
@@ -50,10 +50,6 @@ public class Treads {
         t2.join();
         t3.join();
         t4.join();
-
-        System.out.println(array[count-1]);
-
-
     }
 
 
